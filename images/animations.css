@@ -1,0 +1,44 @@
+@keyframes fadeInFromLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.pop-in {
+  animation-name: popIn;
+  animation-duration: 0.8s;
+  animation-fill-mode: backwards;
+}
+
+.fade-in-from-left {
+  animation-name: fadeInFromLeft;
+  animation-duration: 2s;
+  animation-fill-mode: backwards;
+}
+
+.mycss-can-collapse {
+  max-height: 1000px;
+  transition: max-height 1s;
+  overflow: hidden;
+}
+
+.mycss-collapse {
+  max-height: 0px;
+}

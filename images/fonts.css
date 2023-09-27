@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.mycss-font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.mycss-font-weight-regular {
+  font-weight: 400;
+}
+
+.mycss-font-weight-bold {
+  font-weight: 700;
+}
+
+.mycss-font-no-decoration {
+  text-decoration: none;
+}

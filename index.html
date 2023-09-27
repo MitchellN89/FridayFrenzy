@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="colours.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="containers.css" />
+    <link rel="stylesheet" href="displays.css" />
+    <link rel="stylesheet" href="elements.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+  </head>
+  <body class="mycss-colour-bkg-dark">
+    <nav
+      class="navbar navbar-expand-sm bg-body-tertiary mycss-colour-bkg-dark mycss-display-sticky mycss-display-z-index-higher"
+    >
+      <div class="container-fluid flex-sm-column">
+        <a class="navbar-brand mycss-colour-link-light m-0" href="#"
+          >- FRIDAY FRENZY -</a
+        >
+        <button
+          class="navbar-toggler mycss-colour-bkg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link active mycss-colour-link-light"
+                aria-current="page"
+                href="index.html"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link mycss-colour-link-light" href="cocktails.html"
+                >COCKTAILS</a
+              >
+            </li>
+            <!-- <li class="nav-item mx-2">
+              <a class="nav-link mycss-colour-link-light" href="#">THE STATS</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="mycss-container-title-image mycss-colour-fore-light">
+      <div
+        class="mycss-container-title-content fade-in-from-left mycss-colour-bkg-faded-dark"
+      >
+        <h1
+          class="d-inline-block p-2 mb-0 mycss-font-roboto mycss-font-weight-bold"
+        >
+          FRIDAY <span style="color: white">FRENZY</span>
+        </h1>
+        <p class="d-inline-block p-2 mycss-font-roboto">
+          Welcome to Friday Frenzy - Your Ultimate Cocktail Destination!
+          <br />
+          <br />
+          Discover a world of over 400 exquisite cocktails right at your
+          fingertips. Whether you're a seasoned mixologist or just starting your
+          cocktail journey, we've got something for everyone.
+          <br />
+          <br />
+          Explore a diverse range of cocktails and find your new favorites.
+          Explore the excitement of trying something new with our 3 random
+          cocktail recipes. They change with every visit, so you'll always have
+          a surprise in your glass. See our lucky dip below and let your taste
+          buds embark on a thrilling adventure. Cheers to endless cocktail
+          possibilities! 🍹
+        </p>
+      </div>
+    </section>
+
+    <section class="mycss-colour-bkg-dark">
+      <div id="icon-loading" class="d-flex flex-column align-items-center mt-5">
+        <iconify-icon
+          icon="eos-icons:bubble-loading"
+          style="color: #b7b195"
+          width="70"
+          height="70"
+        ></iconify-icon>
+        <h5 class="mycss-colour-fore-light pt-3">Loading Data...</h5>
+      </div>
+
+      <div
+        class="container mb-5 mt-3 mycss-display-none"
+        id="container-carousel-global"
+      >
+        <h3 class="mt-5 mb-3 mycss-colour-fore-light text-center">
+          LUCKY DIP COCKTAILS
+        </h3>
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner" id="container-carousel"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <template id="template-carousel-item">
+    <div class="carousel-item">
+      <div class="carousel-content">
+        <div class="container mycss-container-carousel-product">
+          <div class="">
+            <div class="mycss-container-product-container">
+              <div class="mycss-container-product-img">
+                <img
+                  src="./images/test.jpg"
+                  alt=""
+                  class="shadow rounded-1 id-carousel-img"
+                />
+              </div>
+              <div class="mycss-container-product-content">
+                <h2 class="mb-2 m-md-4 id-carousel-title"></h2>
+                <ul class="id-carousel-ingredients"></ul>
+                <span
+                  class="d-inline-block ml-4 text-italic id-carousel-instructions"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="debouncer.js"></script>
+  <script src="classes.js"></script>
+  <script src="fetchData.js"></script>
+  <script src="index.js"></script>
+</html>

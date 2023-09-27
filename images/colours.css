@@ -1,0 +1,37 @@
+:root {
+  --myLight: #b7b195;
+  --myDark: #0e0300;
+  --myLightHover: #8f8a75;
+  --myFeatureDark: #281407;
+}
+
+.mycss-colour-bkg-dark {
+  background-color: var(--myDark) !important;
+}
+
+.mycss-colour-bkg-light {
+  background-color: var(--myLight) !important;
+}
+
+.mycss-colour-bkg-featuredark {
+  background-color: var(--myFeatureDark);
+}
+
+.mycss-colour-fore-light {
+  color: var(--myLight) !important;
+}
+
+.mycss-colour-bkg-faded-dark {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.mycss-colour-link-light,
+.mycss-colour-link-light:focus,
+.mycss-colour-link-light:visited,
+.mycss-colour-link-light:active {
+  color: var(--myLight) !important;
+}
+
+.mycss-colour-link-light:hover {
+  color: var(--myLightHover) !important;
+}

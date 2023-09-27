@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="colours.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="containers.css" />
+    <link rel="stylesheet" href="displays.css" />
+    <link rel="stylesheet" href="elements.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="mycss-colour-bkg-dark">
+    <div
+      id="component-modal"
+      class="mycss-display-none mycss-container-modal mycss-display-z-index-highest"
+    >
+      <div class="container mycss-container-product">
+        <div class="">
+          <div class="mycss-container-product-container">
+            <div class="mycss-container-product-img">
+              <img
+                id="modal-img"
+                src="./images/test.jpg"
+                alt=""
+                class="shadow rounded-1"
+              />
+            </div>
+            <div class="mycss-container-product-content">
+              <h2 class="mb-2 m-md-4" id="modal-title">Margarita</h2>
+              <ul id="modal-ingredients">
+                <li>Dash of salt</li>
+                <li>IOS is clearly a grabage institute</li>
+                <li>A pinch of love</li>
+              </ul>
+              <span
+                class="d-inline-block ml-4 text-italic"
+                id="modal-instructions"
+                >Now mix it all up, and blow it out your ass</span
+              >
+            </div>
+            <div class="mycss-container-product-footer">
+              <button id="modal-close" class="btn btn-primary">Go Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-sm bg-body-tertiary mycss-colour-bkg-dark mycss-display-sticky mycss-display-z-index-higher"
+    >
+      <div class="container-fluid flex-sm-column">
+        <a class="navbar-brand mycss-colour-link-light m-0" href="#"
+          >- FRIDAY FRENZY -</a
+        >
+        <button
+          class="navbar-toggler mycss-colour-bkg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link active mycss-colour-link-light"
+                aria-current="page"
+                href="#"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link mycss-colour-link-light" href="#">COCKTAILS</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link mycss-colour-link-light" href="#">THE STATS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="mycss-container-title-image mycss-colour-fore-light">
+      <div class="mycss-container-title-content fade-in-from-left">
+        <h1
+          class="mycss-colour-bkg-faded-dark d-inline-block p-2 mb-0 mycss-font-roboto mycss-font-weight-bold"
+        >
+          COCKTAILS
+        </h1>
+        <p
+          class="mycss-colour-bkg-faded-dark d-inline-block p-2 mycss-font-roboto"
+        >
+          Ready to craft your perfect cocktail? It's as easy as 1, 2, 3! Use our
+          filters to select the ingredients you have in your cupboard. Simply
+          click on the ingredients you want, and watch as we conjure up a list
+          of cocktails you can create with what you've got. Cheers to creativity
+          in a glass!
+        </p>
+      </div>
+    </section>
+    <div id="component-filter-bar"></div>
+    <div
+      class="mycss-display-sticky-1nav container-fluid mycss-colour-bkg-featuredark d-flex justify-content-center mycss-display-z-index-high"
+    >
+      <a
+        id="btn-filters"
+        href="#component-filter-bar"
+        style="box-sizing: content-box"
+        class="mycss-colour-link-light p-3 d-inline-block mycss-font-no-decoration"
+      >
+        OPEN FILTERS
+      </a>
+    </div>
+
+    <section
+      id="section-filter"
+      class="mycss-collapse mycss-colour-bkg-featuredark mycss-can-collapse"
+    >
+      <div class="container">
+        <h2 class="mycss-colour-fore-light p-4 text-center">
+          Select Your Filters
+        </h2>
+        <div id="container-categories" class="row text-center">
+          <template id="template-category-thumbnail">
+            <div
+              class="mycss-element-checkbox col-6 col-sm-4 col-md-3 col-xl-2 text-start"
+            >
+              <input type="checkbox" id="" checked />
+              <label for="checkbox-id1">Margarita</label>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <section class="mycss-colour-bkg-dark pt-3">
+      <div class="container">
+        <div id="container-cocktail-thumbnail" class="row g-3"></div>
+      </div>
+    </section>
+    <div id="tester"></div>
+  </body>
+
+  <template id="template-cocktail-thumbnail">
+    <div class="col-4 col-md-3 col-lg-2 pop-in">
+      <div class="card myID-cocktail-thumbnail m-2">
+        <img
+          class="card-img-top"
+          src="./images/test.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="debouncer.js"></script>
+  <script src="classes.js"></script>
+  <script src="fetchData.js"></script>
+  <script src="cocktails.js"></script>
+  <script src="eventlisteners.js"></script>
+</html>
